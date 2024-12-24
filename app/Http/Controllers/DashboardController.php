@@ -16,14 +16,17 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 
+use Illuminate\Support\Facades\Auth;
+
 class DashboardController extends Controller
 {
     public function index()
     {
+        dd(Auth::user());
   
         $totalOrders        = Order::count();
         $totalProducts      = Product::count();
-        $activeCoupons     = Coupon::count();
+        $activeCoupons      = Coupon::count();
         $totalAccounts      = User::where('type','user')->count();
 
         // Google Analytics

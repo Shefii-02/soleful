@@ -1,4 +1,5 @@
  @extends('admin.layouts.master')
+
  @section('content')
      <div>
          <!-- ===== Data Stats Start ===== -->
@@ -18,13 +19,11 @@
                  <div class="flex items-end justify-between">
                      <div>
                          <h3 class="mb-4 text-title-lg font-bold text-black dark:text-white">
-                             {{ number_format($totalAppointments) ?? 0 }}
+                             {{ number_format($totalOrders) ?? 0 }}
                          </h3>
-                         <p class="font-medium">Total Appoinments</p>
+                         <p class="font-medium">Total Orders</p>
 
                      </div>
-
-
                  </div>
              </div>
 
@@ -33,23 +32,10 @@
                  <div class="flex items-end justify-between">
                      <div>
                          <h3 class="mb-4 text-title-lg font-bold text-black dark:text-white">
-                             {{ number_format($totalEnquiries) ?? 0 }}
+                             {{ number_format($totalProducts) ?? 0 }}
                          </h3>
-                         <p class="font-medium">Total Enquiries</p>
+                         <p class="font-medium">Total Products</p>
 
-                     </div>
-
-                 </div>
-             </div>
-
-             <div
-                 class="rounded-sm border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark md:p-6 xl:p-7.5">
-                 <div class="flex items-end justify-between">
-                     <div>
-                         <h3 class="mb-4 text-title-lg font-bold text-black dark:text-white">
-                             {{ number_format($totalServices) ?? 0 }}
-                         </h3>
-                         <p class="font-medium">Total Services</p>
                      </div>
 
                  </div>
@@ -60,9 +46,22 @@
                  <div class="flex items-end justify-between">
                      <div>
                          <h3 class="mb-4 text-title-lg font-bold text-black dark:text-white">
-                             {{ number_format($totalDoctors) ?? 0 }}
+                             {{ number_format($activeCoupons) ?? 0 }}
                          </h3>
-                         <p class="font-medium">Total Doctors</p>
+                         <p class="font-medium">Active Coupons</p>
+                     </div>
+
+                 </div>
+             </div>
+
+             <div
+                 class="rounded-sm border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark md:p-6 xl:p-7.5">
+                 <div class="flex items-end justify-between">
+                     <div>
+                         <h3 class="mb-4 text-title-lg font-bold text-black dark:text-white">
+                             {{ number_format($totalAccounts) ?? 0 }}
+                         </h3>
+                         <p class="font-medium">Total Accounts</p>
 
                      </div>
 
@@ -90,9 +89,9 @@
 
                      <div class="flex flex-col text-center xsm:flex-row">
                          <div class="border-stroke py-2 dark:border-strokedark xsm:w-1/2 xsm:border-r">
-                             <p class="font-medium">Total Appoinments</p>
+                             <p class="font-medium">Total Orders</p>
                              <h4 class="mt-1 text-title-sm font-bold text-black dark:text-white">
-                                 {{ number_format($totalAppointments) }}
+                                 {{ number_format($totalOrders) }}
                              </h4>
                          </div>
                          <div class="py-2 xsm:w-1/2">
